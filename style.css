@@ -22,6 +22,16 @@ body {
     padding: 5px;
 }
 
+#fontend-button{
+    text-decoration: none;
+    background-color: aliceblue;
+    border-color: darkblue;
+    border-radius: 5px;
+    border-width: 1px;
+    border-style: solid;
+    padding: 5px;
+}
+
 #orders{
     background-color: white;
     min-height: 75%;
