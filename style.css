@@ -22,7 +22,7 @@ body {
     padding: 5px;
 }
 
-#fontend-button{
+#frontend-button{
     text-decoration: none;
     background-color: aliceblue;
     border-color: darkblue;
@@ -37,4 +37,13 @@ body {
     min-height: 75%;
     width: 50%;
     margin-left: 5%;
+    display: inline-block;
+}
+
+#meals{
+    background-color: white;
+    min-height: 75%;
+    width: 50%;
+    margin-left: 5%;
+    display: inline-block;
 }
