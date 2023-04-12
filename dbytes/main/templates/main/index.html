@@ -1,18 +1,77 @@
 <!DOCTYPE html>
 <html>
-  <header>
-    <title>DBytes</title>
-    {% load static %}
-    <link rel="stylesheet" href="{% static 'css/style.css' %}">
-  </header>
+
+    <head>
+
+        <meta charset="utf-8">
+        <title>DBytes</title>
+        <link rel="stylesheet" href="./style.css">
+    </head>
+
     <body>
-      <div id="head"> 
-        <h1>DBytes</h1>
-      </div>
-      <div id="ordersssss">
-          <p>Orders</p>
-          <p>Employee1: {{employeeFirstName}} {{employeeLastName}}</p>
-      </div>
-      <a id="kitchen-button" href="kitchen.html">Kitchen View</button>
+
+        <header>
+            <h1 id="head">DBytes</h1>
+        </header>
+
+        <div class="navbar">
+            <div class="nav-content active"><a href="./index.html">FrontEnd</a></div>
+            <div class="nav-content"><a href="./kitchen.html">Kitchen</a></div>
+        </div>
+
+        <main>
+
+            <form class="mainbody">
+                <label for="cust-name">Customer:</label>
+                <input type="text" id="cust-name" name="cust-name">
+                        
+                <label for="server-name">Server Name:</label>
+                <input type="text" id="server-name" name="server-name">
+                        
+                <label for="order">Order:</label>
+                <select id="order" name="order" rows="5">
+                    <option value="">Please Select</option>
+                    <option value="Burger">Burger</option>
+	                <option value="Chicken">Chicken</option>
+	                <option value="Salad">Salad</option>
+                </select>
+                        
+                <label for="notes">Notes:</label>
+                <textarea id="notes" name="notes" rows="3"></textarea>
+                
+                <br>
+                <br>
+                <button id="submit">Submit Order</button>
+            </form>
+
+        </main>
+
+        <script>
+
+            const submitBtn = document.querySelector('#submit');
+
+            submitBtn.addEventListener('click', function() {
+                const custInput = document.querySelector('#cust-name').value;
+                const serverInput = document.querySelector('#server-name').value;
+                const orderInput = document.querySelector('#order').value;
+                const noteInput = document.querySelector('#notes').value;
+
+
+                localStorage.setItem('cust-name', custInput);
+                localStorage.setItem('server-name', serverInput);
+                localStorage.setItem('order', orderInput);
+                localStorage.setItem('notes', noteInput);
+
+                const test = localStorage.getItem('cust-name');
+                const test2 = localStorage.getItem('server-name');
+                console.log(test);
+                console.log(test2);
+
+                window.location.href = './kitchen.html';
+            });
+
+        </script> 
+
     </body>
+    
 </html>
