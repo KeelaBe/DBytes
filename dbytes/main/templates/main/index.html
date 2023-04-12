@@ -2,16 +2,16 @@
 <html>
   <header>
     <title>DBytes</title>
-    <link rel="stylesheet" href="style.css">
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
   </header>
     <body>
       <div id="head"> 
         <h1>DBytes</h1>
       </div>
       <div id="ordersssss">
-          <p>
-            Orders
-          </p>
+          <p>Orders</p>
+          <p>Employee1: {{employeeFirstName}} {{employeeLastName}}</p>
       </div>
       <a id="kitchen-button" href="kitchen.html">Kitchen View</button>
     </body>
