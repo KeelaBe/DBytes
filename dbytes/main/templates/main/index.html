@@ -5,7 +5,8 @@
 
         <meta charset="utf-8">
         <title>DBytes</title>
-        <link rel="stylesheet" href="./style.css">
+        {% load static %}
+        <link rel="stylesheet" href=" {% static '/css/style.css' %}">
     </head>
 
     <body>
@@ -15,25 +16,29 @@
         </header>
 
         <div class="navbar">
-            <div class="nav-content active"><a href="./index.html">FrontEnd</a></div>
-            <div class="nav-content"><a href="./kitchen.html">Kitchen</a></div>
+            <div class="nav-content active"><a href="/">FrontEnd</a></div>
+            <div class="nav-content"><a href="/kitchen">Kitchen</a></div>
         </div>
 
         <main>
 
-            <form class="mainbody">
+            <form class="mainbody" method="post" action="#">
+              {% csrf_token %}
                 <label for="cust-name">Customer:</label>
                 <input type="text" id="cust-name" name="cust-name">
                         
                 <label for="server-name">Server Name:</label>
-                <input type="text" id="server-name" name="server-name">
+                <select id="server-name" name="server-name">
+                  {% for employee in employees %}
+                  <option value="{{employee}}" SELECTED>{{employee}}</option>
+                  {% endfor %}     
+                </select>
                         
-                <label for="order">Order:</label>
-                <select id="order" name="order" rows="5">
-                    <option value="">Please Select</option>
-                    <option value="Burger">Burger</option>
-	                <option value="Chicken">Chicken</option>
-	                <option value="Salad">Salad</option>
+                <label for="meal">Meal:</label>
+                <select id="meal" name="meal">
+                  {% for meal in meals %}
+                  <option value="{{meal}}" SELECTED>{{meal}} ({{meal.price}})</option>
+                  {% endfor %}     
                 </select>
                         
                 <label for="notes">Notes:</label>
@@ -41,12 +46,12 @@
                 
                 <br>
                 <br>
-                <button id="submit">Submit Order</button>
+                <button id="submit" name="submit">Submit Order</button>
             </form>
 
         </main>
 
-        <script>
+        <!-- <script>
 
             const submitBtn = document.querySelector('#submit');
 
@@ -70,7 +75,7 @@
                 window.location.href = './kitchen.html';
             });
 
-        </script> 
+        </script>  -->
 
     </body>
     

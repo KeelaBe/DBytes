@@ -134,7 +134,10 @@ h1 {
   }
   .mainbody {
     margin: auto;
-    max-width: 500px;
+    max-width: 600px;
+    min-height: 400px;
+    min-width: 500px;
+    max-height: 1000px;
   }
   .navbar{
     display: flex;
@@ -143,4 +146,14 @@ h1 {
 ul {
     display: flex;
     flex-direction: row;
+}
+
+.form-group{
+  display:flex;
+  border-bottom: 1px solid black;
+  margin-bottom:10px;
+}
+
+#notes {
+  min-width: 400px;
 }
