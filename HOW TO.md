@@ -23,3 +23,6 @@ The CSS file is loacated in: [DBytes](https://github.com/KeelaBe/DBytes)/[dbytes
 The code for the backend table data models are located at (not important unless wanted to add more tables or change table structure): [DBytes](https://github.com/KeelaBe/DBytes)/[dbytes](https://github.com/KeelaBe/DBytes/tree/main/dbytes)/[main](https://github.com/KeelaBe/DBytes/tree/main/dbytes/main)/**models.py** 
 
 This is the code that handles the API (passes data in html forms to backend SQLite database using a POST http request):[DBytes](https://github.com/KeelaBe/DBytes)/[dbytes](https://github.com/KeelaBe/DBytes/tree/main/dbytes)/[main](https://github.com/KeelaBe/DBytes/tree/main/dbytes/main)/**views.py**
+
+## Jinja 
+You may see some Jinja in the HTML code. Jinja usually is formated in curly braces EX:{% for order in orders %}. It makes HTML more dynamic and allows us to pass data into HTML using query from the SQLite DB.
