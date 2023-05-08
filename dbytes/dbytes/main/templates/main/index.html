@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+
+    <head>
+
+        <meta charset="utf-8">
+        <title>DBytes</title>
+        {% load static %}
+        <link rel="stylesheet" href=" {% static '/css/style.css' %}">
+        <link rel="shortcut icon" type="image/png" href=" {% static 'favicon.png' %} "/>
+    </head>
+
+    <body>
+
+        <header>
+            <h1 id="head">DBytes</h1>
+        </header>
+
+        <div class="navbar">
+            <div class="nav-content"><a href="/" >FrontEnd</a></div>
+            <div class="nav-content"><a href="/kitchen">Kitchen</a></div>
+        </div>
+
+        <main>
+
+            <form class="mainbody" method="post" action="#">
+              {% csrf_token %}
+                <label for="cust-name">Customer:</label>
+                <input type="text" id="cust-name" name="cust-name">
+                        
+                <label for="server-name">Server Name:</label>
+                <select id="server-name" name="server-name">
+                  {% for employee in employees %}
+                  <option value="{{employee}}" SELECTED>{{employee}}</option>
+                  {% endfor %}     
+                </select>
+                        
+                <label for="meal">Meal:</label>
+                <select id="meal" name="meal">
+                  {% for meal in meals %}
+                  <option value="{{meal}}" SELECTED>{{meal}} ({{meal.price}})</option>
+                  {% endfor %}     
+                </select>
+                        
+                <label for="notes">Notes:</label>
+                <textarea id="notes" name="notes" rows="3"></textarea>
+                
+                <br>
+                <br>
+                <button id="submit" name="submit">Submit Order</button>
+            </form>
+
+            <div id="daily-sales-box">
+                <h3 id="daily-stats">Daily Stats</h3>
+                
+                <h5>Meals Ordered Today: {{order_quantity}}</h5>
+                <h5>Reveneue Today: {{daily_revenue}}</h5>
+
+                {% for emp_order in employee_orders %}
+                <h5>Sales by {{ emp_order.0.0 }}: {{ emp_order.0.1 }} </h5>
+                {% endfor %}   
+
+                {% for meal_order in meal_orders %}
+                <h5>Orders of {{ meal_order.0.0 }}: {{ meal_order.0.1 }} </h5>
+                {% endfor %}   
+
+            </div>
+
+        </main>
+
+    </body>
+    
+</html>

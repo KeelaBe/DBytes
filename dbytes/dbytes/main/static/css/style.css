@@ -1,0 +1,196 @@
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: lightskyblue;
+}
+
+#head{
+    text-align: center;
+    margin-top: 25px;
+    margin-bottom: 15px;
+    background-color:rgb(250, 250, 197);
+    border: 1px solid #ffd532;
+
+}
+
+#kitchen-button{
+    text-decoration: none;
+    background-color: aliceblue;
+    border-color: darkblue;
+    border-radius: 5px;
+    border-width: 1px;
+    border-style: solid;
+    padding: 5px;
+}
+
+#frontend-button{
+    text-decoration: none;
+    background-color: aliceblue;
+    border-color: darkblue;
+    border-radius: 5px;
+    border-width: 1px;
+    border-style: solid;
+    padding: 5px;
+}
+
+#orders{
+    background-color: white;
+    min-height: 75%;
+    width: 50%;
+    margin-left: 5%;
+    display: inline-block;
+}
+
+#meals{
+    background-color: white;
+    min-height: 75%;
+    width: 50%;
+    margin-left: 5%;
+    display: inline-block;
+}
+
+h1 {
+    margin: 0;
+    font-size: 36px;
+    font-weight: bold;
+    text-transform: uppercase;
+  }
+  main {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    padding: 20px;
+  }
+  section {
+    background-color: #fff;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+    flex: 1;
+    margin: 10px;
+    padding: 20px;
+    max-width: 300px;
+  }
+  section h2 {
+    margin: 0;
+    font-size: 24px;
+    font-weight: bold;
+    text-transform: uppercase;
+  }
+  section ul {
+    list-style: none;
+    padding: 0;
+    margin: 20px 0;
+  }
+  section li {
+    display: flex;
+    justify-content: space-between;
+    padding: 5px 0;
+    border-bottom: 1px solid #ccc;
+    font-size: 16px;
+  }
+  section li:last-child {
+    border-bottom: none;
+  }
+  section .total {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 10px;
+    font-size: 18px;
+    font-weight: bold;
+  }
+  form {
+    background-color: #fff;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+    margin: 10px;
+    padding: 20px;
+    max-width: 300px;
+  }
+  form label {
+    display: block;
+    font-size: 18px;
+    font-weight: bold;
+    margin-bottom: 10px;
+  }
+  form input[type="text"] {
+    padding: 10px;
+    font-size: 16px;
+    border-radius: 5px;
+    border: none;
+    margin-bottom: 20px;
+    width: 100%;
+    box-shadow: inset 0 2px 3px rgba(0, 0, 0, 0.1);
+  }
+  form input[type="submit"] {
+    background-color: #333;
+    color: #fff;
+    padding: 10px 20px;
+    font-size: 16px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  form input[type="submit"]:hover {
+    background-color: #444;
+  }
+  .mainbody {
+    margin-left: 35%;
+    max-width: 600px;
+    min-height: 400px;
+    min-width: 500px;
+    max-height: 1000px;
+  }
+
+ul {
+    display: flex;
+    flex-direction: row;
+}
+
+.form-group{
+  display:flex;
+  border-bottom: 1px solid black;
+  margin-bottom:10px;
+}
+
+#notes {
+  min-width: 400px;
+}
+
+.navbar{
+  display: flex;
+  flex-direction: row;
+  text-decoration: none; 
+}
+
+a {
+  text-decoration: none; 
+  color:black;
+}
+
+.nav-content {
+  color: #fff;
+  background-color: #fff;
+  padding: 10px 20px;
+  font-size: 16px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  margin: auto;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+}
+
+#daily-sales-box {
+  background-color: #fff;
+  font-size: 16px;
+  border: none;
+  border-radius: 5px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+  min-height: 200px;
+  min-width: 300px;
+  display: inline;
+  padding-left: 5px;
+}
+
+#daily-stats{
+  text-align: center;
+  text-decoration: underline;
+}
