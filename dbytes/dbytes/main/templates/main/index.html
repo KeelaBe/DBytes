@@ -54,7 +54,7 @@
                 <h3 id="daily-stats">Daily Stats</h3>
                 
                 <h5>Meals Ordered Today: {{order_quantity}}</h5>
-                <h5>Reveneue Today: {{daily_revenue}}</h5>
+                <h5>Reveneue Today: {{daily_revenue}}</h5> 
 
                 {% for emp_order in employee_orders %}
                 <h5>Sales by {{ emp_order.0.0 }}: {{ emp_order.0.1 }} </h5>
