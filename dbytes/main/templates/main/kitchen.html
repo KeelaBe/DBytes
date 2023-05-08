@@ -5,6 +5,7 @@
     <title>DBytes</title>
     {% load static %}
     <link rel="stylesheet" href=" {% static '/css/style.css' %}">  
+    <link rel="shortcut icon" type="image/png" href=" {% static 'favicon.png' %} "/>
   </head>
 
   <body>
@@ -14,7 +15,7 @@
     </header>
 
     <div class="navbar">
-      <div class="nav-content active"><a href="/">FrontEnd</a></div>
+      <div class="nav-content"><a href="/">FrontEnd</a></div>
       <div class="nav-content"><a href="/kitchen">Kitchen</a></div>
     </div>
     
@@ -56,86 +57,6 @@
             </form>
             </section> 
 
-          <script>
-            
-            // const kitchenOrders = document.querySelector('#Kitchen-Orders');
-            // const custName = '{{order.customerName}}';
-            // const servName = '{{order.employeeName}}';
-            // const order = '{{order.mealName}}';
-            // const notes = '{{order.notes}}';
-      
-            // const section = document.createElement('section');
-            // section.classList.add('Kitchen-Orders');
-
-            // const head = document.createElement('h2');
-            // head.innerHTML = 'Order ID: {{order.id}}';
-            // section.appendChild(head);
-
-            // const br0 = document.createElement('br');
-            // const br = document.createElement('br');
-            // const hr = document.createElement('hr');
-
-            // const custLabel = document.createElement('label');
-            // custLabel.textContent = 'Customer: ';
-            // const cust = document.createElement('span');
-            // cust.textContent = custName;
-            // section.appendChild(br0);
-            // section.appendChild(custLabel);
-            // section.appendChild(cust);
-            // section.appendChild(br);
-            // section.appendChild(hr);
-
-
-            // const servLabel = document.createElement('label');
-            // servLabel.textContent = 'Server: ';
-            // const serv = document.createElement('span');
-            // serv.textContent = servName;
-            // const br2 = document.createElement('br');
-            // const hr2 = document.createElement('hr');
-            // section.appendChild(servLabel);
-            // section.appendChild(serv);
-            // section.appendChild(br2);
-            // section.appendChild(hr2);
-
-            // const orderLabel = document.createElement('label');
-            // orderLabel.textContent = 'Order: ';
-            // const ord = document.createElement('span');
-            // ord.textContent = order;
-            // const br3 = document.createElement('br');
-            // const hr3 = document.createElement('hr');
-            // section.appendChild(orderLabel);
-            // section.appendChild(ord);
-            // section.appendChild(br3);
-            // section.appendChild(hr3);
-
-
-            // const noteLabel = document.createElement('label');
-            // noteLabel.textContent = 'Notes: ';
-            // const note = document.createElement('span');
-            // note.textContent = notes;
-            // const br4 = document.createElement('br');
-            // const hr4 = document.createElement('hr');
-            // section.appendChild(noteLabel);
-            // section.appendChild(note);
-            // section.appendChild(br4);
-            // section.appendChild(hr4);
-
-            // const deleteBtn = document.createElement('button');
-            // deleteBtn.classList.add('delete-btn');
-            // deleteBtn.textContent = 'Finish';
-      
-            // deleteBtn.addEventListener('click', function() {
-            //   section.remove();
-            // });
-
-            // const comp = document.createElement('h3');
-            // comp.innerHTML = 'Complete: ';
-            // section.appendChild(comp);
-            // section.appendChild(deleteBtn);
-      
-            // kitchenOrders.appendChild(section);
-            
-           </script>
           </li>
         {% endfor %}  
         </ul>
