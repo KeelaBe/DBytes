@@ -7,6 +7,7 @@
         <title>DBytes</title>
         {% load static %}
         <link rel="stylesheet" href=" {% static '/css/style.css' %}">
+        <link rel="shortcut icon" type="image/png" href=" {% static 'favicon.png' %} "/>
     </head>
 
     <body>
@@ -16,7 +17,7 @@
         </header>
 
         <div class="navbar">
-            <div class="nav-content active"><a href="/">FrontEnd</a></div>
+            <div class="nav-content"><a href="/" >FrontEnd</a></div>
             <div class="nav-content"><a href="/kitchen">Kitchen</a></div>
         </div>
 
@@ -49,33 +50,23 @@
                 <button id="submit" name="submit">Submit Order</button>
             </form>
 
+            <div id="daily-sales-box">
+                <h3 id="daily-stats">Daily Stats</h3>
+                
+                <h5>Meals Ordered Today: {{order_quantity}}</h5>
+                <h5>Reveneue Today: {{daily_revenue}}</h5> 
+
+                {% for emp_order in employee_orders %}
+                <h5>Sales by {{ emp_order.0.0 }}: {{ emp_order.0.1 }} </h5>
+                {% endfor %}   
+
+                {% for meal_order in meal_orders %}
+                <h5>Orders of {{ meal_order.0.0 }}: {{ meal_order.0.1 }} </h5>
+                {% endfor %}   
+
+            </div>
+
         </main>
-
-        <!-- <script>
-
-            const submitBtn = document.querySelector('#submit');
-
-            submitBtn.addEventListener('click', function() {
-                const custInput = document.querySelector('#cust-name').value;
-                const serverInput = document.querySelector('#server-name').value;
-                const orderInput = document.querySelector('#order').value;
-                const noteInput = document.querySelector('#notes').value;
-
-
-                localStorage.setItem('cust-name', custInput);
-                localStorage.setItem('server-name', serverInput);
-                localStorage.setItem('order', orderInput);
-                localStorage.setItem('notes', noteInput);
-
-                const test = localStorage.getItem('cust-name');
-                const test2 = localStorage.getItem('server-name');
-                console.log(test);
-                console.log(test2);
-
-                window.location.href = './kitchen.html';
-            });
-
-        </script>  -->
 
     </body>
     
